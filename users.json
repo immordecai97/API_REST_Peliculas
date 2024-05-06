@@ -1,0 +1,9 @@
+[
+    {
+        "nombre": "Carlos",
+        "password": "1234",
+        "email": "carlos@gmail.com",
+        "estado": "true",
+        "imagen": "sinImagen.jpg"
+    }
+]

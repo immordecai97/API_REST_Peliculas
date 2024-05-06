@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Pelis</title>
+</head>
+
+<body>
+    <main>
+        <h1>API de pelis</h1>
+        <h2>RUTAS:</h2>
+        <p><strong>Nota:</strong> todas las rutas tienen por defecto despues del "<em>http://localhost:3000</em>" llevan
+            el siguiente endpoint: "<em>/api/v1</em>"</p>
+        <p>por lo tanto quedaría de la siguiente manera: "<em>http://localhost:3000/api/v1</em>" más el endpoint</p>
+        <h2>Rutas GET</h2>
+        <ul>
+            <li><a href="http://localhost:3000/api/v1/peliculas">http://localhost:3000/api/v1/peliculas</a>
+                <span><strong>Nota:</strong> Si no estas "loggeado/a" te va a responder con un "<em>Acceso
+                        denegado</em>"</span>
+            </li>
+            <li><a
+                    href="http://localhost:3000/api/v1/peliculas/663871857d2464bef4512a65">http://localhost:3000/api/v1/peliculas/:id</a>
+            </li>
+            <li><a href="http://localhost:3000/api/v1/usuarios">http://localhost:3000/api/v1/usuarios</a></li>
+        </ul>
+        <h2>Rutas de POST</h2>
+        <ul>
+            <li><strong>Crear una pelicula</strong>
+                <ul>
+                    <li>http://localhost:3000/api/v1/peliculas</li>
+                    <li>
+                        <strong>Body:</strong>
+                        <p> { <br>
+                            "title": "Una linda pelicula nueva", <br>
+                            "year": 2024, <br>
+                            "director": "La profe Camila", <br>
+                            "duration": 142, <br>
+                            "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp", <br>
+                            "genre": ["Drama"], <br>
+                            "rate": 10 <br>
+                            }
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Crear un usuario</strong>
+                <ul>
+                    <li>http://localhost:3000/api/v1/usuarios</li>
+                    <li>
+                        <strong>Body:</strong>
+                        <p> { <br>
+                            "nombre": "Camila", <br>
+                            "password": "unaContrasenaDificil", <br>
+                            "email": "camila@gmail.com", <br>
+                            "estado": "true", <br>
+                            "imagen": "nezuko.jpg" <br>
+                            }
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Iniciar sesión</strong>
+                <ul>
+                    <li>http://localhost:3000/api/v1/login <span><strong>Nota: </strong> Al iniciar sesión te retornará el token para luego pasarlo por header como "<em>auth</em>"</span></li>
+                    <li>
+                        <strong>Body:</strong>
+                        <p> { <br>
+                            "email": "carlos@gmail.com" <br>
+                            "password": "1234", <br>
+                            }
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Rutas de PATCH</h2>
+        <ul>
+            <li><strong>Modificar una pelicula</strong>
+                <ul>
+                    <li>http://localhost:3000/api/v1/peliculas/:id</li>
+                    <li>
+                        <strong>Body:</strong>
+                        <p> { <br>
+                            "title": "Una linda pelicula MODIFICADA", <br>
+                            "year": 2020, <br>
+                            "director": "Akira Toriyama", <br>
+                            }
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Rutas de PUT</h2>
+        <ul>
+            <li><strong>Modificar usuario</strong>
+                <ul>
+                    <li>http://localhost:3000/api/v1/usuarios/:email</li>
+                    <li>
+                        <strong>Body:</strong>
+                        <p>
+                            {
+                            "email": "carlitos@gmail.com"
+                            "nombre": "Nuevo nombre"
+                            "password": "123456"
+                            }
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Rutas de DELETE</h2>
+        <ul>
+            <li><strong>Eliminar pelicula</strong>
+                <ul>
+                    <li>http://localhost:3000/api/v1/peliculas/:id</li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
